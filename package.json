@@ -1,14 +1,17 @@
 {
-  "name": "@rosepad-tech/sdk",
+  "name": "@rosehub-tech/sdk",
   "license": "MIT",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "🛠 An SDK for building applications on top of Pancakeswap.",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
   "files": [
     "dist"
   ],
-  "repository": "https://github.com/rosepad-tech/sdk.git",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rosepad-tech/sdk.git"
+  },
   "keywords": [
     "rosehub",
     "oasis",
@@ -58,5 +61,13 @@
   },
   "publishConfig": {
     "@rosepad-tech:registry": "https://npm.pkg.github.com"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/rosepad-tech/sdk/issues"
+  },
+  "homepage": "https://github.com/rosepad-tech/sdk#readme",
+  "directories": {
+    "test": "test"
+  },
+  "author": "rosehub-tech"
 }
