@@ -2,7 +2,7 @@ import { Price } from './fractions/price';
 import { BigintIsh } from '../constants';
 import { CurrencyAmount } from './fractions';
 import { Token } from './token';
-export declare const computePairAddress: ({ factoryAddress, tokenA, tokenB, }: {
+export declare const computePairAddress: ({ factoryAddress, tokenA, tokenB }: {
     factoryAddress: string;
     tokenA: Token;
     tokenB: Token;

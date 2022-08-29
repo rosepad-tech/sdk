@@ -27,6 +27,23 @@ function _createClass(Constructor, protoProps, staticProps) {
   return Constructor;
 }
 
+function _extends() {
+  _extends = Object.assign ? Object.assign.bind() : function (target) {
+    for (var i = 1; i < arguments.length; i++) {
+      var source = arguments[i];
+
+      for (var key in source) {
+        if (Object.prototype.hasOwnProperty.call(source, key)) {
+          target[key] = source[key];
+        }
+      }
+    }
+
+    return target;
+  };
+  return _extends.apply(this, arguments);
+}
+
 function _inheritsLoose(subClass, superClass) {
   subClass.prototype = Object.create(superClass.prototype);
   subClass.prototype.constructor = subClass;
@@ -839,9 +856,15 @@ var Percent = /*#__PURE__*/function (_Fraction) {
   return Percent;
 }(Fraction);
 
-// const composeKey = (token0: Token, token1: Token) => `${token0.chainId}-${token0.address}-${token1.address}`
+var PAIR_ADDRESS_CACHE = {};
+
+var composeKey = function composeKey(token0, token1) {
+  return token0.chainId + "-" + token0.address + "-" + token1.address;
+};
 
 var computePairAddress = function computePairAddress(_ref) {
+  var _PAIR_ADDRESS_CACHE;
+
   var factoryAddress = _ref.factoryAddress,
       tokenA = _ref.tokenA,
       tokenB = _ref.tokenB;
@@ -851,7 +874,15 @@ var computePairAddress = function computePairAddress(_ref) {
       token1 = _ref2[1]; // does safety checks
 
 
-  return getCreate2Address(factoryAddress, keccak256(['bytes'], [pack(['address', 'address'], [token0.address, token1.address])]), INIT_CODE_HASH_MAP[token0.chainId]);
+  var key = composeKey(token0, token1);
+
+  if (((_PAIR_ADDRESS_CACHE = PAIR_ADDRESS_CACHE) == null ? void 0 : _PAIR_ADDRESS_CACHE[key]) === undefined) {
+    var _extends2;
+
+    PAIR_ADDRESS_CACHE = _extends({}, PAIR_ADDRESS_CACHE, (_extends2 = {}, _extends2[key] = getCreate2Address(factoryAddress, keccak256(['bytes'], [pack(['address', 'address'], [token0.address, token1.address])]), INIT_CODE_HASH_MAP[token0.chainId]), _extends2));
+  }
+
+  return PAIR_ADDRESS_CACHE[key];
 };
 var Pair = /*#__PURE__*/function () {
   function Pair(currencyAmountA, tokenAmountB) {
