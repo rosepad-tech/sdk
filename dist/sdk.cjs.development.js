@@ -363,9 +363,9 @@ var _FACTORY_ADDRESS_MAP, _INIT_CODE_HASH_MAP, _SOLIDITY_TYPE_MAXIMA, _WROSE, _W
 })(exports.Rounding || (exports.Rounding = {}));
 
 var FACTORY_ADDRESS = '';
-var FACTORY_ADDRESS_MAP = (_FACTORY_ADDRESS_MAP = {}, _FACTORY_ADDRESS_MAP[exports.ChainId.OASIS_MAINNET] = FACTORY_ADDRESS, _FACTORY_ADDRESS_MAP[exports.ChainId.EMERALD_TESTNET] = '0xc33e9d33F36170dB24B2000f08bbab25cC8D627b', _FACTORY_ADDRESS_MAP);
-var INIT_CODE_HASH = '0xcc31b2afde0e74ef335d55d24e073c4dc47eb4ac71d4f021a227c56c5555a972';
-var INIT_CODE_HASH_MAP = (_INIT_CODE_HASH_MAP = {}, _INIT_CODE_HASH_MAP[exports.ChainId.OASIS_MAINNET] = INIT_CODE_HASH, _INIT_CODE_HASH_MAP[exports.ChainId.EMERALD_TESTNET] = '0xcc31b2afde0e74ef335d55d24e073c4dc47eb4ac71d4f021a227c56c5555a972', _INIT_CODE_HASH_MAP);
+var FACTORY_ADDRESS_MAP = (_FACTORY_ADDRESS_MAP = {}, _FACTORY_ADDRESS_MAP[exports.ChainId.OASIS_MAINNET] = FACTORY_ADDRESS, _FACTORY_ADDRESS_MAP[exports.ChainId.EMERALD_TESTNET] = '0x69ef1662D9544b007D5B8FF827C86793D8F04E79', _FACTORY_ADDRESS_MAP);
+var INIT_CODE_HASH = '0xadb8ced8622f5a41096bc3443794fdcb518f1f9d9aa5b5c98fa1f9bda862638b';
+var INIT_CODE_HASH_MAP = (_INIT_CODE_HASH_MAP = {}, _INIT_CODE_HASH_MAP[exports.ChainId.OASIS_MAINNET] = INIT_CODE_HASH, _INIT_CODE_HASH_MAP[exports.ChainId.EMERALD_TESTNET] = '0xadb8ced8622f5a41096bc3443794fdcb518f1f9d9aa5b5c98fa1f9bda862638b', _INIT_CODE_HASH_MAP);
 var MINIMUM_LIQUIDITY = /*#__PURE__*/JSBI.BigInt(1000); // exports for internal consumption
 
 var ZERO = /*#__PURE__*/JSBI.BigInt(0);
@@ -385,7 +385,7 @@ var MaxUint256 = /*#__PURE__*/JSBI.BigInt('0xfffffffffffffffffffffffffffffffffff
 })(exports.SolidityType || (exports.SolidityType = {}));
 
 var SOLIDITY_TYPE_MAXIMA = (_SOLIDITY_TYPE_MAXIMA = {}, _SOLIDITY_TYPE_MAXIMA[exports.SolidityType.uint8] = /*#__PURE__*/JSBI.BigInt('0xff'), _SOLIDITY_TYPE_MAXIMA[exports.SolidityType.uint256] = /*#__PURE__*/JSBI.BigInt('0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff'), _SOLIDITY_TYPE_MAXIMA);
-var WROSE = (_WROSE = {}, _WROSE[exports.ChainId.OASIS_MAINNET] = /*#__PURE__*/new Token(exports.ChainId.OASIS_MAINNET, '0x21C718C22D52d0F3a789b752D4c2fD5908a8A733', 18, 'WROSE', 'Wrapped ROSE', 'https://www.oasis.org'), _WROSE[exports.ChainId.EMERALD_TESTNET] = /*#__PURE__*/new Token(exports.ChainId.EMERALD_TESTNET, '0xFEa03d709361547E99CC927D3717ed96e94e32aC', 18, 'WROSE', 'Wrapped ROSE', 'https://www.oasis.org'), _WROSE);
+var WROSE = (_WROSE = {}, _WROSE[exports.ChainId.OASIS_MAINNET] = /*#__PURE__*/new Token(exports.ChainId.OASIS_MAINNET, '0x21C718C22D52d0F3a789b752D4c2fD5908a8A733', 18, 'WROSE', 'Wrapped ROSE', 'https://rose.io'), _WROSE[exports.ChainId.EMERALD_TESTNET] = /*#__PURE__*/new Token(exports.ChainId.EMERALD_TESTNET, '0x966be6f726C6D600Fd199aF3E6396cC4930cFbCC', 18, 'WROSE', 'Wrapped ROSE', 'https://rose.io'), _WROSE);
 var WNATIVE = (_WNATIVE = {}, _WNATIVE[exports.ChainId.OASIS_MAINNET] = WROSE[exports.ChainId.OASIS_MAINNET], _WNATIVE[exports.ChainId.EMERALD_TESTNET] = WROSE[exports.ChainId.EMERALD_TESTNET], _WNATIVE);
 var NATIVE = (_NATIVE = {}, _NATIVE[exports.ChainId.OASIS_MAINNET] = {
   name: 'Oasis Network Native Token',

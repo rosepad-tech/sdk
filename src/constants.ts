@@ -24,12 +24,12 @@ export const FACTORY_ADDRESS = ''
 
 export const FACTORY_ADDRESS_MAP: Record<number, string> = {
   [ChainId.OASIS_MAINNET]: FACTORY_ADDRESS,
-  [ChainId.EMERALD_TESTNET]: '0xc33e9d33F36170dB24B2000f08bbab25cC8D627b'
+  [ChainId.EMERALD_TESTNET]: '0x69ef1662D9544b007D5B8FF827C86793D8F04E79'
 }
-export const INIT_CODE_HASH = '0xcc31b2afde0e74ef335d55d24e073c4dc47eb4ac71d4f021a227c56c5555a972'
+export const INIT_CODE_HASH = '0xadb8ced8622f5a41096bc3443794fdcb518f1f9d9aa5b5c98fa1f9bda862638b'
 export const INIT_CODE_HASH_MAP: Record<number, string> = {
   [ChainId.OASIS_MAINNET]: INIT_CODE_HASH,
-  [ChainId.EMERALD_TESTNET]: '0xcc31b2afde0e74ef335d55d24e073c4dc47eb4ac71d4f021a227c56c5555a972'
+  [ChainId.EMERALD_TESTNET]: '0xadb8ced8622f5a41096bc3443794fdcb518f1f9d9aa5b5c98fa1f9bda862638b'
 }
 
 export const MINIMUM_LIQUIDITY = JSBI.BigInt(1000)
@@ -64,15 +64,15 @@ export const WROSE = {
     18,
     'WROSE',
     'Wrapped ROSE',
-    'https://www.oasis.org'
+    'https://rose.io'
   ),
   [ChainId.EMERALD_TESTNET]: new Token(
     ChainId.EMERALD_TESTNET,
-    '0xFEa03d709361547E99CC927D3717ed96e94e32aC',
+    '0x966be6f726C6D600Fd199aF3E6396cC4930cFbCC',
     18,
     'WROSE',
     'Wrapped ROSE',
-    'https://www.oasis.org'
+    'https://rose.io'
   )
 }
 
