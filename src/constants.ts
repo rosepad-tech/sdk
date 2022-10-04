@@ -6,7 +6,8 @@ export type BigintIsh = JSBI | number | string
 
 export enum ChainId {
   OASIS_MAINNET = 26863,
-  EMERALD_TESTNET = 42261
+  EMERALD_TESTNET = 42261,
+  EMERALD_MAINNET = 42262
 }
 
 export enum TradeType {
@@ -20,15 +21,15 @@ export enum Rounding {
   ROUND_UP
 }
 
-export const FACTORY_ADDRESS = ''
+export const FACTORY_ADDRESS = '0x8fA72dE7e5635188F0fbcA122C86D67Dd8429fF1'
 
 export const FACTORY_ADDRESS_MAP: Record<number, string> = {
-  [ChainId.OASIS_MAINNET]: FACTORY_ADDRESS,
+  [ChainId.EMERALD_MAINNET]: FACTORY_ADDRESS,
   [ChainId.EMERALD_TESTNET]: '0x69ef1662D9544b007D5B8FF827C86793D8F04E79'
 }
 export const INIT_CODE_HASH = '0xadb8ced8622f5a41096bc3443794fdcb518f1f9d9aa5b5c98fa1f9bda862638b'
 export const INIT_CODE_HASH_MAP: Record<number, string> = {
-  [ChainId.OASIS_MAINNET]: INIT_CODE_HASH,
+  [ChainId.EMERALD_MAINNET]: INIT_CODE_HASH,
   [ChainId.EMERALD_TESTNET]: '0xadb8ced8622f5a41096bc3443794fdcb518f1f9d9aa5b5c98fa1f9bda862638b'
 }
 
@@ -58,8 +59,8 @@ export const SOLIDITY_TYPE_MAXIMA = {
 }
 
 export const WROSE = {
-  [ChainId.OASIS_MAINNET]: new Token(
-    ChainId.OASIS_MAINNET,
+  [ChainId.EMERALD_MAINNET]: new Token(
+    ChainId.EMERALD_MAINNET,
     '0x21C718C22D52d0F3a789b752D4c2fD5908a8A733',
     18,
     'WROSE',
@@ -77,7 +78,7 @@ export const WROSE = {
 }
 
 export const WNATIVE: Record<number, Token> = {
-  [ChainId.OASIS_MAINNET]: WROSE[ChainId.OASIS_MAINNET],
+  [ChainId.EMERALD_MAINNET]: WROSE[ChainId.EMERALD_MAINNET],
   [ChainId.EMERALD_TESTNET]: WROSE[ChainId.EMERALD_TESTNET]
 }
 
@@ -89,7 +90,7 @@ export const NATIVE: Record<
     decimals: number
   }
 > = {
-  [ChainId.OASIS_MAINNET]: {
+  [ChainId.EMERALD_MAINNET]: {
     name: 'Oasis Network Native Token',
     symbol: 'ROSE',
     decimals: 18

@@ -3,7 +3,8 @@ import { Token } from './entities/token';
 export declare type BigintIsh = JSBI | number | string;
 export declare enum ChainId {
     OASIS_MAINNET = 26863,
-    EMERALD_TESTNET = 42261
+    EMERALD_TESTNET = 42261,
+    EMERALD_MAINNET = 42262
 }
 export declare enum TradeType {
     EXACT_INPUT = 0,
@@ -14,7 +15,7 @@ export declare enum Rounding {
     ROUND_HALF_UP = 1,
     ROUND_UP = 2
 }
-export declare const FACTORY_ADDRESS = "";
+export declare const FACTORY_ADDRESS = "0x8fA72dE7e5635188F0fbcA122C86D67Dd8429fF1";
 export declare const FACTORY_ADDRESS_MAP: Record<number, string>;
 export declare const INIT_CODE_HASH = "0xadb8ced8622f5a41096bc3443794fdcb518f1f9d9aa5b5c98fa1f9bda862638b";
 export declare const INIT_CODE_HASH_MAP: Record<number, string>;
@@ -38,7 +39,7 @@ export declare const SOLIDITY_TYPE_MAXIMA: {
     uint256: JSBI;
 };
 export declare const WROSE: {
-    26863: Token;
+    42262: Token;
     42261: Token;
 };
 export declare const WNATIVE: Record<number, Token>;

@@ -1,10 +1,10 @@
 import { Token, WNATIVE, ChainId, Pair, Route, Native, CurrencyAmount } from '../src'
 
 describe('Route', () => {
-  const ETHER = Native.onChain(ChainId.OASIS_MAINNET)
-  const token0 = new Token(ChainId.OASIS_MAINNET, '0x0000000000000000000000000000000000000001', 18, 't0')
-  const token1 = new Token(ChainId.OASIS_MAINNET, '0x0000000000000000000000000000000000000002', 18, 't1')
-  const weth = WNATIVE[ChainId.OASIS_MAINNET]
+  const ETHER = Native.onChain(ChainId.EMERALD_MAINNET)
+  const token0 = new Token(ChainId.EMERALD_MAINNET, '0x0000000000000000000000000000000000000001', 18, 't0')
+  const token1 = new Token(ChainId.EMERALD_MAINNET, '0x0000000000000000000000000000000000000002', 18, 't1')
+  const weth = WNATIVE[ChainId.EMERALD_MAINNET]
   const pair_0_1 = new Pair(CurrencyAmount.fromRawAmount(token0, '100'), CurrencyAmount.fromRawAmount(token1, '200'))
   const pair_0_weth = new Pair(CurrencyAmount.fromRawAmount(token0, '100'), CurrencyAmount.fromRawAmount(weth, '100'))
   const pair_1_weth = new Pair(CurrencyAmount.fromRawAmount(token1, '175'), CurrencyAmount.fromRawAmount(weth, '100'))
@@ -15,7 +15,7 @@ describe('Route', () => {
     expect(route.path).toEqual([token0, token1])
     expect(route.input).toEqual(token0)
     expect(route.output).toEqual(token1)
-    expect(route.chainId).toEqual(ChainId.OASIS_MAINNET)
+    expect(route.chainId).toEqual(ChainId.EMERALD_MAINNET)
   })
 
   it('can have a token as both input and output', () => {
